@@ -1,0 +1,19 @@
+int i, t;
+i = t = 0;
+if (i < 20) {
+    int x;
+    if (i < 10) {
+        int k;
+    } else {
+        boolean i;
+    }
+    int z;
+} else {
+    int x;
+    if (i < 10) {
+        int k;
+    } else {
+        boolean i;
+    }
+    int z;
+}

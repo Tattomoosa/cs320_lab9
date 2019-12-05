@@ -1,0 +1,9 @@
+int i, j;
+boolean b;
+b = i; /* assign int to boolean */
+i = b; /* assign boolean to int */
+if (i < b) { /* types of left operand and right operand do not match */
+    if (i) {
+        print b;
+    }
+}

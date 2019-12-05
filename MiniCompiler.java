@@ -40,9 +40,10 @@ public class MiniCompiler {
     // new TextOutput(System.out).toText(prog);
     // new IndentOutput(System.out).indent(prog);
 
-    // String dot = name + "_ast.dot";
-    // new DotOutput(dot).toDot(prog);
-    // System.out.println("AST after parsing: " + dot);
+    // Create dot plot
+    String dot = name + "_ast.dot";
+    new DotOutput(dot).toDot(prog);
+    System.out.println("AST after parsing: " + dot);
 
     new ScopeAnalysis(handler).analyze(prog);
 
@@ -50,9 +51,9 @@ public class MiniCompiler {
     // new HTMLOutput(html).toHTML(prog);
     // System.out.println("Resolved program: " + html);
 
-    // String env = name + "_env.dot";
-    // new DotEnvOutput(env).dotEnv(prog);  
-    // System.out.println("Environment graph output: " + env);
+    String env = name + "_env.dot";
+    new DotEnvOutput(env).dotEnv(prog);  
+    System.out.println("Environment graph output: " + env);
 
     new TypeAnalysis(handler).analyze(prog);
 
