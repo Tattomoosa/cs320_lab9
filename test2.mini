@@ -1,0 +1,15 @@
+int i, t;
+i = t = 0;
+if (i < 10) {
+  int k;
+  k = i + 2;
+  print (i + k);
+} else {
+  boolean i;
+  i = (t < 2);
+  if (i)
+    print t;
+}
+int z;
+z = i + 3;
+print z;

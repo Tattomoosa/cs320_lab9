@@ -1,0 +1,6 @@
+boolean x, y;
+if ((x=true) || (y=true))
+  if (x) print 0; else print 1;
+boolean x, y;
+if ((x=true) || (y=x))
+  if (x) print 0; else print 1;
