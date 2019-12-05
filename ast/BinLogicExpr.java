@@ -21,5 +21,14 @@ public abstract class BinLogicExpr extends BinExpr {
         right.require(typing, Type.BOOLEAN);
         return type = Type.BOOLEAN;
     }
+
+    /** Run initialization analysis on this expression.
+     * Boolean logic expressions are a special case because
+     * they short circuit, so only the left-hand side will
+     * always evaluate an initialization.
+     * */
+    public VarSet analyze(InitAnalysis init, VarSet initialized) {
+        return left.analyze(init, initialized);
+    }
 }
 

@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-make && \
-    echo "" && \
-    echo "" && \
-    java MiniCompiler $1 && \
-    dot -Tpdf -o $1_ast.pdf $1_ast.dot && \
-    dot -Tpdf -o $1_env.pdf $1_env.dot && \
-    echo "" && \
-    echo "" && \
-    mv $1 output && \
-    mv $1_env.pdf output && \
-    rm $1_env.dot
-    mv $1_ast.pdf output && \
-    rm $1_ast.dot
+make
+java MiniCompiler $1
+dot -Tpdf -o $1_ast.pdf $1_ast.dot
+dot -Tpdf -o $1_env.pdf $1_env.dot
+echo ""
+echo ""
+mv $1 output
+mv $1_env.pdf output
+rm $1_env.dot
+mv $1_ast.pdf output
+rm $1_ast.dot
