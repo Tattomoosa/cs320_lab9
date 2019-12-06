@@ -106,7 +106,8 @@ public class VarDecl extends PosStmt {
             Env env = v.getEnv();
             IdList uses = env.getUses();
             if (uses == null) {
-                use.report(new Failure(pos, "Unused variable"));
+                use.report(new Failure(pos, "The variable \"" + v.name +
+                            "\" is unused."));
             }
         }
     }

@@ -2,18 +2,26 @@ int i, t;
 i = t = 0;
 if (i < 20) {
     int x;
+    x = 0;
     if (i < 10) {
         int k;
+        k = 0;
     } else {
         boolean i;
+        i = true;
     }
     int z;
+    z = 0;
 } else {
     int x;
+    x = 0;
     if (i < 10) {
         int k;
+        k = 0;
     } else {
         boolean i;
+        i = true;
     }
     int z;
+    z = 0;
 }
