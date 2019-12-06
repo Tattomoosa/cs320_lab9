@@ -91,6 +91,11 @@ public class If extends PosStmt {
         ifFalse.analyze(typing);
     }
 
+    public void analyze(UseAnalysis use) {
+        ifTrue.analyze(use);
+        ifFalse.analyze(use);
+    }
+
     /** Run initialization analysis on this statement.  The init
      *  parameter provides access to an initialization analysis phase
      *  object (specifically, to an associated error handler).  The

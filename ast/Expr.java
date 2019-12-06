@@ -86,6 +86,8 @@ public abstract class Expr {
      */
     public abstract Type analyze(TypeAnalysis typing);
 
+    public void analyze(UseAnalysis use) {}
+
     /** Run the type checking analysis on an expression that is required to
      *  have the type specified by the expected parameter.
      */

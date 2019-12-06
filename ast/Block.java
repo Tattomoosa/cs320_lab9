@@ -121,6 +121,11 @@ public class Block extends Stmt {
            s.analyze(typing);
     }
 
+    public void analyze(UseAnalysis use) {
+        for (Stmt s: body)
+            s.analyze(use);
+    }
+
     /** Run initialization analysis on this statement.  The init
      *  parameter provides access to an initialization analysis phase
      *  object (specifically, to an associated error handler).  The

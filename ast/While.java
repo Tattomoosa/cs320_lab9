@@ -94,6 +94,10 @@ public class While extends PosStmt {
         return initialized;
     }
 
+    public void analyze(UseAnalysis use) {
+        body.analyze(use);
+    }
+
     /** Attempt to simplify all of the expressions in this statement.
      */
     public void simplify() {

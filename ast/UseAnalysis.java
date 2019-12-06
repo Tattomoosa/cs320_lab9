@@ -20,6 +20,7 @@ public class UseAnalysis extends Phase {
     public void analyze(Stmt stmt)
       throws Failure {
 	// fill in here
+        stmt.analyze(this);
         if (getHandler().hasFailures()) {
             throw new Failure("Aborting: errors detected during use checking");
         }

@@ -59,7 +59,7 @@ public class MiniCompiler {
 
     new InitAnalysis(handler).analyze(prog);
 
-    //  new UseAnalysis(handler).analyze(prog);
+    new UseAnalysis(handler).analyze(prog);
   }
 
   // Generate executable version of program:

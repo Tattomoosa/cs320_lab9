@@ -101,6 +101,15 @@ public class VarDecl extends PosStmt {
         return initialized; // No evaluation or initialization in a VarDecl
     }
 
+    public void analyze(UseAnalysis use) {
+        for (Id v : vars) {
+            Env env = v.getEnv();
+            IdList uses = env.getUses();
+            if (uses == null) {
+                use.report(new Failure(pos, "Unused variable"));
+            }
+        }
+    }
 
     /** Attempt to simplify all of the expressions in this statement.
      */

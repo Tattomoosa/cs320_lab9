@@ -82,6 +82,10 @@ public class Print extends PosStmt {
         return exp.analyze(init, initialized);
     }
 
+    public void analyze(UseAnalysis use) {
+        exp.analyze(use);
+    }
+
     /** Attempt to simplify all of the expressions in this statement.
      */
     public void simplify() {

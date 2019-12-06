@@ -72,6 +72,10 @@ public class Empty extends PosStmt {
         return initialized;
     }
 
+    public void analyze(UseAnalysis use) {
+        /* Nothing here */
+    }
+
     /** Attempt to simplify all of the expressions in this statement.
      */
     public void simplify() {

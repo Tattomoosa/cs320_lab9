@@ -93,6 +93,8 @@ public abstract class Stmt {
      */
     public abstract VarSet analyze(InitAnalysis init, VarSet initialized);
 
+    public abstract void analyze(UseAnalysis use);
+
     /** Attempt to simplify all of the expressions in this statement.
      */
     public abstract void simplify();
